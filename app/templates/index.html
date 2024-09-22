@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iso Downloader</title>
+    <!--<script src="https://unpkg.com/htmx.org@2.0.2"
+        integrity="sha384-Y7hw+L/jvKeWIRRkqWYfPcvVxHzVzn5REgzbawhxAuQGwX1XWe70vji+VSeHOThJ"
+        crossorigin="anonymous"></script> -->
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body>
+    <main class="w-100">
+        <div class="grid gap-4 grid-cols-3 place-items-center">
+            {% for item in items %}
+            <div class="list-item">
+                <img src="https://img.freepik.com/free-vector/yellow-beauty-butterfly-insect-icon_18591-82368.jpg?w=900&t=st=1726898992~exp=1726899592~hmac=843dc092b098ac5fd751a359b218f7f504599bb02dbb5f7d97197342e2da23a9"
+                    alt="">
+                <strong>{{ item.name }}</strong>
+                <strong>{{ item.size }}</strong>
+                <a href={{ item.link }}><button>Download</button></a>
+            </div>
+            {% endfor %}
+        </div>
+    </main>
+</body>
+
+</html>
